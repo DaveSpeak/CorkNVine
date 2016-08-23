@@ -24,11 +24,29 @@ nav.navbar.navbar-default {
   background-color: rgba(0, 0, 0, 0.65);
   min-height: 100px;
 }
+.navbar {
+  min-height: 0;
+  margin-bottom: 1px; 
+}
 
 #title {
   margin-left: 200px;
 }
 
+.nav.navbar-nav {
+  margin-left: 140px;
+}
+
+a.nav-item.nav-link {
+  color: linen;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-decoration: none;
+}
+
+a.nav-item.nav-link:hover {
+  color: #4d9900;
+}
 .col-xs-7 {
  
   margin-right: 20px;
@@ -95,6 +113,7 @@ h4  {
 h6 {
   font-size: 14px;
   font-family: Arial;
+  padding-top: 10px;
 }
 
 #region {
@@ -306,20 +325,6 @@ p {
   border-radius: 6px;
 }
 
-footer.sticky {
-  display: table-row;
-  height: 1px;
-  width: 100%;
-}
- footer#foot-content {
-    background-color: #000000;
-    font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
-    bottom:0;
-    width: 100%;
-    height:70px;
-    text-align: center;
-}
-
 .drop-target .drop-content {
     display: none;
 }
@@ -344,7 +349,7 @@ div.drop-content {
   z-index: 2;
 }
 
-#mainP {
+/*#mainP {
   float: right;
   text-align: center;
   text-decoration: none;
@@ -360,7 +365,7 @@ div.drop-content {
 }
 #mainP>a:hover {
   color: #b2b266;
-  }
+  }*/
 
 #eureka,
 #mendocino,
@@ -403,7 +408,22 @@ div.drop-content {
 #mapContainer {
   width: 100%;
   height: 100%;
-background-color: rgba(0, 0, 0, 0.75);
-padding-top: 1px;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding-top: 1px;
 
+}
+
+footer.sticky {
+/*  display: table-row;
+*/float: left;
+  width: 100%;
+}
+ footer#foot-content {
+    background-color: rgba(0, 0, 0, 0.75);
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    color: #fff9e6;
+    bottom:0;
+    width: 100%;
+    height:40px;
+    text-align: center;
 }
