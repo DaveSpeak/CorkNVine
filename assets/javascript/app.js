@@ -32,27 +32,21 @@ var matchFood=[
 ]
 $(document).ready(function() {
 	// populate drink match list
-	for (var i=0;i<matchDrink.length;i++){
-		$('#drinkmatchlist').append($('<li>').html($('<p>').attr({'class':'drinkMatch','value':matchDrink[i].like})
-			.html(matchDrink[i].title)));
-	}
-	$('.drinkMatch').on('click',function(){
-		for (var i=0;i<matchDrink.length;i++){
-			if ($(this).attr('value')==matchDrink[i].like){
-				alert('You like '+($(this).attr('value'))+', so we think you\'ll like '+matchDrink[i].match);
-			}
-		}
-	});
+	populateMenu('drinkmatchlist',matchDrink,'drinkMatch');
 	// populate food match list
-	for (var i=0;i<matchFood.length;i++){
-		$('#right-side').append($('<li>').html($('<p>').attr({'class':'foodMatch','value':matchFood[i].like})
-			.html(matchFood[i].title)));
+	populateMenu('right-side',matchFood,'foodMatch');
+});
+function populateMenu(menuId,itemId,classId){
+	for (var i=0;i<itemId.length;i++){
+		console.log(itemId[i].like);
+		$('#'+menuId).append($('<li>').html($('<p>').attr({'class':classId,'value':itemId[i].like})
+			.html(itemId[i].title)));
 	}
-	$('.foodMatch').on('click',function(){
-		for (var i=0;i<matchFood.length;i++){
-			if ($(this).attr('value')==matchFood[i].like){
-				alert('You like '+($(this).attr('value'))+', so we think you\'ll like '+matchFood[i].match);
+	$('.'+classId).on('click',function(){
+		for (var i=0;i<itemId.length;i++){
+			if ($(this).attr('value')==itemId[i].like){
+				alert('You like '+($(this).attr('value'))+', so we think you\'ll like '+itemId[i].match);
 			}
 		}
 	});
-});
+}
