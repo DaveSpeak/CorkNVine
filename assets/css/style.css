@@ -39,8 +39,8 @@ nav.navbar.navbar-default {
 
 a.nav-item.nav-link {
   color: linen;
-  padding-left: 30px;
-  padding-right: 30px;
+/*  padding-left: 30px;
+*/  padding-right: 30px;
   text-decoration: none;
 }
 
@@ -73,12 +73,15 @@ a.nav-item.nav-link:hover {
   width: 220px;
 }
 
-h1,
+/*h1,*/
 h2 {
   font-family: 'Georgia', Times, Times New Roman, serif;
+  text-align: center;
+  color: #fff9e6;
+  background: rgba(0, 0, 0, 0.75);
 }
 
-h1 {
+/*h1 {
   font-size: 80px;
   font-weight: bold;
   color: #ffffff;
@@ -87,7 +90,7 @@ h1 {
   margin-left: 25%;
   margin-top: 0px;
   position: absolute;
-}
+}*/
 
 h3 {
   color: #660022;
@@ -135,7 +138,7 @@ h6 {
 }
 
 ul.main>li {
-   background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.75);
   padding-left:10px;
   margin-bottom: 15px;
 }
@@ -411,6 +414,10 @@ div.drop-content {
   background-color: rgba(0, 0, 0, 0.75);
   padding-top: 1px;
 
+}
+
+#menuPairings {
+  margin-left: 200px;
 }
 
 footer.sticky {
