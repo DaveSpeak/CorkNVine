@@ -40,7 +40,7 @@ function start() {
 //             results = response.data;
 
 
-            
+
 
   new Tether({
     element: eureka,
@@ -376,7 +376,7 @@ function start() {
     });
     drop = new Drop({
         target: document.querySelector('#sanDiego'),
-        content: list[21],
+        content: list[21] + " " + list[20], 
         position: 'left middle',
         openOn: 'click',
         classes: 'drop-theme-arrows-bounce-dark'
