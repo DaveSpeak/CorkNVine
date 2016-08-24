@@ -1,4 +1,11 @@
-var strangeFacts=[];
+var strangeFacts=[
+	'Wine bottles were once used as projectiles during the French Revolution',
+	'Wine is considered a cure for the hiccups',
+	'Wine is red or white',
+	'Australians like green wine',
+	'Random fact 1',
+	'Random fact 2'
+];
 var matchDrink=[
 	{title:'Vodka straight or with water/club soda',like:'vodka-straight',match:'sauvignon-blanc'},
 	{title:'Vodka with sweet mixer',like:'vodka-sweet',match:'moscato'},
@@ -30,6 +37,18 @@ var matchFood=[
 	{title:'Sweet with chocolate',like:'sweet-chocolate',match:'zinfandel'},
 	{title:'Other sweets',like:'other-sweet',match:'search'}
 ]
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBlMaraNlThfpxmkyToi52NGL2HXuTZjOE",
+    authDomain: "corknvine-6d5a8.firebaseapp.com",
+    databaseURL: "https://corknvine-6d5a8.firebaseio.com",
+    storageBucket: "corknvine-6d5a8.appspot.com",
+  };
+  firebase.initializeApp(config);
+var database = firebase.database();
+var choiceRef = database.ref("/choices");
+var locationRef = database.ref("/locations");
+
 $(document).ready(function() {
 	// populate drink match list
 	populateMenu('drinkmatchlist',matchDrink,'drinkMatch');
@@ -38,15 +57,66 @@ $(document).ready(function() {
 });
 function populateMenu(menuId,itemId,classId){
 	for (var i=0;i<itemId.length;i++){
-		console.log(itemId[i].like);
-		$('#'+menuId).append($('<li>').html($('<p>').attr({'class':classId,'value':itemId[i].like})
+		$('#'+menuId).append($('<li>').html($('<a>').attr({'class':classId,'value':itemId[i].like})
 			.html(itemId[i].title)));
 	}
 	$('.'+classId).on('click',function(){
 		for (var i=0;i<itemId.length;i++){
 			if ($(this).attr('value')==itemId[i].like){
-				alert('You like '+($(this).attr('value'))+', so we think you\'ll like '+itemId[i].match);
+				console.log('You like '+($(this).attr('value'))+', so we think you\'ll like '+itemId[i].match);
+				var searchTerm="https://www.googleapis.com/customsearch/v1?key=AIzaSyCMGfdDaSfjqv5zYoS0mTJnOT3e9MURWkU&cx=005427488377789592791:p7w1yrvn9co&q=";
+				var terms=itemId[i].match;
+				terms=terms.replace(/[!@#$%^&*()+=\[\]\{\}\:\;\'\",.<>?/\\|`~]/g,'');
+				terms=terms.replace(/ /g,'+');
+				searchTerm+=terms;
+				// console.log(searchTerm);
+					$.ajax({url: searchTerm, method: "GET"}) 
+						.done(function(RETURN) {
+						var title=[];
+						for (var j=0;j<10;j++){
+							title[j] = {
+							 name:RETURN.items[j].title,
+							 url:RETURN.items[j].link
+							};
+							choiceRef.push(title[j]);
+							console.log(title[j]);
+						}
+							// choiceRef.set(title);
+					});
 			}
 		}
-	});
+		setTimeout("pageRedirect('dummy.html')",1000);
+		});
 }
+function pageRedirect(destination){
+	window.location.href=destination;
+	return false;
+}
+$('#strange').on('click', function(){
+	var select=Math.floor(Math.random()*strangeFacts.length);
+	console.log(select);
+	alert(strangeFacts[select]);
+	return false;
+});
+$('#addLocation').on('click', function(){
+				var searchTerm="https://www.googleapis.com/customsearch/v1?key=AIzaSyCMGfdDaSfjqv5zYoS0mTJnOT3e9MURWkU&cx=005427488377789592791:p7w1yrvn9co&q=vineyard+";
+				var terms=$('#location-input').val().trim();;
+				terms=terms.replace(/[!@#$%^&*()+=\[\]\{\}\:\;\'\",.<>?/\\|`~]/g,'');
+				terms=terms.replace(/ /g,'+');
+				searchTerm+=terms;
+				console.log(searchTerm);
+					$.ajax({url: searchTerm, method: "GET"}) 
+						.done(function(RETURN) {
+						var title=[];
+						console.log('got here');
+						for (var j=0;j<10;j++){
+							title[j] = {
+							 name:RETURN.items[j].title,
+							 url:RETURN.items[j].link
+							};
+							console.log(title[j]);
+						}
+							// locationRef.set(title);
+					});
+					return false;
+});
