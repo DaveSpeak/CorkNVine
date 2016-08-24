@@ -84,7 +84,7 @@ function populateMenu(menuId,itemId,classId){
 					});
 			}
 		}
-		setTimeout("pageRedirect('dummy.html')",1000);
+		setTimeout("pageRedirect('pairings.html')",1000);
 		// pageRedirect('dummy.html');
 		});
 }
@@ -124,10 +124,10 @@ $('#addLocation').on('click', function(){
     var listGift = [];
     giftList = Math.floor(Math.random() * names.length); 
 
-drop = new Drop{
-        target: document.querySelector('#gifts'),
-        content: giftList[,
-        position: 'left top',
-        openOn: 'click',
-        classes: 'drop-theme-arrows-bounce-dark'
-    };
+// drop = new Drop{
+//         target: document.querySelector('#gifts'),
+//         content: giftList[,
+//         position: 'left top',
+//         openOn: 'click',
+//         classes: 'drop-theme-arrows-bounce-dark'
+//     };
