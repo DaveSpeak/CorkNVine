@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  var list = ['Eureka', 'Mendocino', 'Sonoma', 'Napa Valley', 
+  var list = ['<a href="#">Eureka</a>', 'Mendocino', 'Sonoma', 'Napa Valley', 
   'Sacramento', 'San Francisco', 'Lodi', 'Livermore', 
   'Modesto', 'SantaCruz', 'Monterey/Carmel', 'Sierra Foothills', 
   'Madera', 'Fresno', 'San Luis Obispo', 'Santa Barbara', 
@@ -42,14 +42,11 @@ function start() {
 
 
 
-  new Tether({
-    element: eureka,
-    target: map,
-    attachment: 'bottom right',
-    targetAttachment: 'top left',
-    // offset: '90px 20px',
-    targetOffset: '90px 45px'
-  });
+  // new Drop({
+  //   target: eureka,
+  //   position: 'top left',
+  //   openOn: 'click'
+  // });
   new Tether({
     element: mendocino,
     target: map,
