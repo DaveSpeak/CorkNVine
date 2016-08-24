@@ -37,7 +37,7 @@
             <li>
               <a href="map.html"><h3 id="region">About Regions &amp; Grapes</h3><img src="assets/images/purple-grapes.png" class="img-group" alt=""></a>
                 
-              <a href="facts.html"><h3 id="facts">Strange Facts</h3></a><a href="facts.html"><img src="assets/images/red-wine.png" class="img-group" alt=""></a>
+              <a href="" id="strange"><h3 id="facts">Strange Facts</h3></a><img src="assets/images/red-wine.png" class="img-group" alt=""></a>
             </li>
 
             <li class="menu">
@@ -45,42 +45,44 @@
               <div class="dropdown">
                 <button class="dropdown-toggle" type="button" data-toggle="dropdown">What wine would I like if I usually drink:
                   <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                      <li><a href="pairings.html">Vodka straight or with water/club soda</a></li>
-                      <li><a href="pairings.html">Vodka with sweet mixer</a></li>
-                      <li><a href="pairings.html">Vodka with sour mixer</a></li>
-                      <li><a href="pairings.html">Scotch straight or with water/club soda</a></li>
-                      <li><a href="pairings.html">Rum straight or with water/club soda</a></li>
-                      <li><a href="pairings.html">Rum with sweet mixer</a></li>
-                      <li><a href="pairings.html">Rum with sour mixer</a></li>
-                      <li><a href="pairings.html">Gin straight or with water/club soda</a></li>
-                      <li><a href="pairings.html">Gin with sweet mixer</a></li>
-                      <li><a href="pairings.html">Gin with sour mixer</a></li>
-                      <li><a href="pairings.html">Tequila straight</a></li>
-                      <li><a href="pairings.html">Tequila with sweet mixer</a></li>
-                      <li><a href="pairings.html">Tequila with sour mixer</a></li>
-                      <li><a href="pairings.html">Lager</a></li>
-                      <li><a href="pairings.html">Ale</a></li>
-                      <li><a href="pairings.html">Beer</a></li>
-                      <li><a href="pairings.html">Hard Lemonade or Hard Iced Tea</a></li>
-                      <li><a href="pairings.html">Other</a></li>
-                    </ul>
+
+                    <ul class="dropdown-menu" id="drinkmatchlist">
+<!--                       <li><p class='drinkMatch' value='vodka-straight'>Vodka straight or with water/club soda</p></li>
+                      <li><p class='drinkMatch' value='vodka-sweet'>Vodka with sweet mixer</p></li>
+                      <li><p class='drinkMatch' value='vodka-sour'>Vodka with sour mixer</p></li>
+                      <li><p class='drinkMatch' value='scotch'>Scotch straight or with water/club soda</p></li>
+                      <li><p class='drinkMatch' value='rum-straight'>Rum straight or with water/club soda</p></li>
+                      <li><p class='drinkMatch' value='rum-sweet'>Rum with sweet mixer</p></li>
+                      <li><p class='drinkMatch' value='rum-sour'>Rum with sour mixer</p></li>
+                      <li><p class='drinkMatch' value='gin-straight'>Gin straight or with water/club soda</p></li>
+                      <li><p class='drinkMatch' value='gin-sweet'>Gin with sweet mixer</p></li>
+                      <li><p class='drinkMatch' value='gin-sour'>Gin with sour mixer</p></li>
+                      <li><p class='drinkMatch' value='tequila-straight'>Tequila straight</p></li>
+                      <li><p class='drinkMatch' value='tequila-sweet'>Tequila with sweet mixer</p></li>
+                      <li><p class='drinkMatch' value='tequila-sour'>Tequila with sour mixer</p></li>
+                      <li><p class='drinkMatch' value='lager'>Lager</p></li>
+                      <li><p class='drinkMatch' value='ale'>Ale</p></li>
+                      <li><p class='drinkMatch' value='beer'>Beer</p></li>
+                      <li><p class='drinkMatch' value='hard-lemonade'>Hard Lemonade or Hard Iced Tea</p></li>
+                      <li><p class='drinkMatch' value='other'>Other</p></li>
+ -->                    </ul>
               </div>
  
               <div class="dropdown">
                 <button class="dropdown-toggle" type="button" data-toggle="dropdown">Match wines with this type of food:
                   <span class="caret"></span></button>
                     <ul class="dropdown-menu" id="right-side">
-                      <li><a href="pairings.html">Red Meat</a></li>
-                      <li><a href="pairings.html">Poultry</a></li>
-                      <li><a href="pairings.html">Fish</a></li>
-                      <li><a href="pairings.html">Light meal or appetizers</a></li>
-                      <li><a href="pairings.html">Salty</a></li>
-                      <li><a href="pairings.html">Tart</a></li>
-                      <li><a href="pairings.html">Spicy</a></li>
-                      <li><a href="pairings.html">Sweet with chocolate</a></li>
-                      <li><a href="pairings.html">Other sweets</a></li>
-                    </ul>
+
+<!--                       <li><a href="#">Red Meat</a></li>
+                      <li><a href="#">Poultry</a></li>
+                      <li><a href="#">Fish</a></li>
+                      <li><a href="#">Light meal or appetizers</a></li>
+                      <li><a href="#">Salty</a></li>
+                      <li><a href="#">Tart</a></li>
+                      <li><a href="#">Spicy</a></li>
+                      <li><a href="#">Sweet with chocolate</a></li>
+                      <li><a href="#">Other sweets</a></li>
+ -->                    </ul>
               </div>
             </li>
 
@@ -147,6 +149,7 @@
         </footer> 
       </footer> 
     </div>
-  
+  <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+  <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
 </html>
