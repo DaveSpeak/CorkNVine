@@ -78,14 +78,14 @@ function populateMenu(menuId,itemId,classId){
 							 name:RETURN.items[j].title,
 							 url:RETURN.items[j].link
 							};
-							choiceRef.push(title[j]);
 							console.log(title[j]);
 						}
-							// choiceRef.set(title);
+							choiceRef.set(title);
 					});
 			}
 		}
 		setTimeout("pageRedirect('dummy.html')",1000);
+		// pageRedirect('dummy.html');
 		});
 }
 function pageRedirect(destination){
@@ -119,4 +119,5 @@ $('#addLocation').on('click', function(){
 							// locationRef.set(title);
 					});
 					return false;
+
 });
