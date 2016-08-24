@@ -119,5 +119,15 @@ $('#addLocation').on('click', function(){
 							// locationRef.set(title);
 					});
 					return false;
-
 });
+
+    var listGift = [];
+    giftList = Math.floor(Math.random() * names.length); 
+
+drop = new Drop{
+        target: document.querySelector('#gifts'),
+        content: giftList[,
+        position: 'left top',
+        openOn: 'click',
+        classes: 'drop-theme-arrows-bounce-dark'
+    };
