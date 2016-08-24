@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  var list = ['<a href="#">Eureka</a>', 'Mendocino', 'Sonoma', 'Napa Valley', 
+  var list = ['<a href="#">Humbolt County</a>', 'Mendocino', 'Sonoma', 'Napa Valley', 
   'Sacramento', 'San Francisco', 'Lodi', 'Livermore', 
   'Modesto', 'SantaCruz', 'Monterey/Carmel', 'Sierra Foothills', 
   'Madera', 'Fresno', 'San Luis Obispo', 'Santa Barbara', 
@@ -47,174 +47,174 @@ function start() {
   //   position: 'top left',
   //   openOn: 'click'
   // });
-  new Tether({
-    element: mendocino,
-    target: map,
-    attachment: 'bottom right',
-    targetAttachment: 'top left',
-    // offset: '20px 0px',
-    targetOffset: '190px 60px'
-  });
-  new Tether({
-    element: sierra,
-    target: map,
-    attachment: 'bottom right',
-    targetAttachment: 'top left',
-    // offset: '20px 0px',
-    targetOffset: '190px 210px'
-  });
-  new Tether({
-    element: sonoma,
-    target: map,
-    attachment: 'bottom right',
-    targetAttachment: 'top left',
-    // offset: '20px 0px',
-    targetOffset: '250px 90px'
-  });
-  new Tether({
-    element: napa,
-    target: map,
-    attachment: 'bottom right',
-    targetAttachment: 'top left',
-    // offset: '20px 0px',
-    targetOffset: '255px 125px'
-  });
-  new Tether({
-    element: sacramento,
-    target: map,
-    attachment: 'bottom right',
-    targetAttachment: 'top left',
-    // offset: '20px 0px',
-    targetOffset: '255px 180px'
-  });
-  new Tether({
-    element: sanFrancisco,
-    target: map,
-    attachment: 'bottom right',
-    targetAttachment: 'top left',
-    // offset: '20px 0px',
-    targetOffset: '330px 100px'
-  });
-  new Tether({
-    element: lodi,
-    target: map,
-    attachment: 'bottom right',
-    targetAttachment: 'top left',
-    // offset: '20px 0px',
-    targetOffset: '290px 200px'
-  });
-  new Tether({
-    element: livermore,
-    target: map,
-    attachment: 'bottom right',
-    targetAttachment: 'top left',
-    // offset: '20px 0px',
-    targetOffset: '330px 165px'
-  });
-  new Tether({
-    element: modesto,
-    target: map,
-    attachment: 'bottom right',
-    targetAttachment: 'top left',
-    // offset: '20px 0px',
-    targetOffset: '310px 210px'
-  });
-  new Tether({
-    element: santaCruz,
-    target: map,
-    attachment: 'bottom right',
-    targetAttachment: 'center left',
-    // offset: '20px 0px',
-    targetOffset: '20px 120px'
-  });
-  new Tether({
-    element: madera,
-    target: map,
-    attachment: 'bottom right',
-    targetAttachment: 'center left',
-    // offset: '20px 0px',
-     targetOffset: '0 290px'
-  });
-  new Tether({
-    element: fresno,
-    target: map,
-    attachment: 'bottom right',
-    targetAttachment: 'center left',
-    // offset: '20px 0px',
-    targetOffset: '60px 250px'
-  });
-  new Tether({
-    element: monterey,
-    target: map,
-    attachment: 'bottom right',
-    targetAttachment: 'center left',
-    // offset: '20px 0px',
-    targetOffset: '80px 170px'
-  });
-  new Tether({
-    element: sanLuis,
-    target: map,
-    attachment: 'bottom right',
-    targetAttachment: 'center left',
-    // offset: '20px 0px',
-    targetOffset: '135px 215px'
-  });
-  new Tether({
-    element: santaBarbara,
-    target: map,
-    attachment: 'bottom right',
-    targetAttachment: 'center left',
-    // offset: '20px 0px',
-    targetOffset: '185px 235px'
-  });
-  new Tether({
-    element: venturaCounty,
-    target: map,
-    attachment: 'bottom right',
-    targetAttachment: 'center left',
-    // offset: '20px 0px',
-    targetOffset: '200px 320px'
-  });
-  new Tether({
-    element: malibu,
-    target: map,
-    attachment: 'bottom right',
-    targetAttachment: 'center left',
-    // offset: '20px 0px',
-    targetOffset: '250px 340px'
-  });
-  new Tether({
-    element: losAngeles,
-    target: map,
-    attachment: 'bottom right',
-    targetAttachment: 'center left',
-    // offset: '20px 0px',
-    targetOffset: '200px 365px'
-  });
-  new Tether({
-    element: orangeCounty,
-    target: map,
-    attachment: 'bottom right',
-    targetAttachment: 'center left',
-    // offset: '20px 0px',
-    targetOffset: '255px 390px'
-  });
-  new Tether({
-    element: palmSprings,
-    target: map,
-    attachment: 'bottom right',
-    targetAttachment: 'center left',
-    // offset: '20px 0px',
-    targetOffset: '245px 480px'
-  });
-  new Tether({
-    element: sanDiego,
-    target: map,
-    attachment: 'bottom right',
-    targetAttachment: 'center left',
-    // offset: '20px 0px',
-    targetOffset: '300px 460px'
-    });
+  // new Tether({
+  //   element: mendocino,
+  //   target: map,
+  //   attachment: 'bottom right',
+  //   targetAttachment: 'top left',
+  //   // offset: '20px 0px',
+  //   targetOffset: '190px 60px'
+  // });
+  // new Tether({
+  //   element: sierra,
+  //   target: map,
+  //   attachment: 'bottom right',
+  //   targetAttachment: 'top left',
+  //   // offset: '20px 0px',
+  //   targetOffset: '190px 210px'
+  // });
+  // new Tether({
+  //   element: sonoma,
+  //   target: map,
+  //   attachment: 'bottom right',
+  //   targetAttachment: 'top left',
+  //   // offset: '20px 0px',
+  //   targetOffset: '250px 90px'
+  // });
+  // new Tether({
+  //   element: napa,
+  //   target: map,
+  //   attachment: 'bottom right',
+  //   targetAttachment: 'top left',
+  //   // offset: '20px 0px',
+  //   targetOffset: '255px 125px'
+  // });
+  // new Tether({
+  //   element: sacramento,
+  //   target: map,
+  //   attachment: 'bottom right',
+  //   targetAttachment: 'top left',
+  //   // offset: '20px 0px',
+  //   targetOffset: '255px 180px'
+  // });
+  // new Tether({
+  //   element: sanFrancisco,
+  //   target: map,
+  //   attachment: 'bottom right',
+  //   targetAttachment: 'top left',
+  //   // offset: '20px 0px',
+  //   targetOffset: '330px 100px'
+  // });
+  // new Tether({
+  //   element: lodi,
+  //   target: map,
+  //   attachment: 'bottom right',
+  //   targetAttachment: 'top left',
+  //   // offset: '20px 0px',
+  //   targetOffset: '290px 200px'
+  // });
+  // new Tether({
+  //   element: livermore,
+  //   target: map,
+  //   attachment: 'bottom right',
+  //   targetAttachment: 'top left',
+  //   // offset: '20px 0px',
+  //   targetOffset: '330px 165px'
+  // });
+  // new Tether({
+  //   element: modesto,
+  //   target: map,
+  //   attachment: 'bottom right',
+  //   targetAttachment: 'top left',
+  //   // offset: '20px 0px',
+  //   targetOffset: '310px 210px'
+  // });
+  // new Tether({
+  //   element: santaCruz,
+  //   target: map,
+  //   attachment: 'bottom right',
+  //   targetAttachment: 'center left',
+  //   // offset: '20px 0px',
+  //   targetOffset: '20px 120px'
+  // });
+  // new Tether({
+  //   element: madera,
+  //   target: map,
+  //   attachment: 'bottom right',
+  //   targetAttachment: 'center left',
+  //   // offset: '20px 0px',
+  //    targetOffset: '0 290px'
+  // });
+  // new Tether({
+  //   element: fresno,
+  //   target: map,
+  //   attachment: 'bottom right',
+  //   targetAttachment: 'center left',
+  //   // offset: '20px 0px',
+  //   targetOffset: '60px 250px'
+  // });
+  // new Tether({
+  //   element: monterey,
+  //   target: map,
+  //   attachment: 'bottom right',
+  //   targetAttachment: 'center left',
+  //   // offset: '20px 0px',
+  //   targetOffset: '80px 170px'
+  // });
+  // new Tether({
+  //   element: sanLuis,
+  //   target: map,
+  //   attachment: 'bottom right',
+  //   targetAttachment: 'center left',
+  //   // offset: '20px 0px',
+  //   targetOffset: '135px 215px'
+  // });
+  // new Tether({
+  //   element: santaBarbara,
+  //   target: map,
+  //   attachment: 'bottom right',
+  //   targetAttachment: 'center left',
+  //   // offset: '20px 0px',
+  //   targetOffset: '185px 235px'
+  // });
+  // new Tether({
+  //   element: venturaCounty,
+  //   target: map,
+  //   attachment: 'bottom right',
+  //   targetAttachment: 'center left',
+  //   // offset: '20px 0px',
+  //   targetOffset: '200px 320px'
+  // });
+  // new Tether({
+  //   element: malibu,
+  //   target: map,
+  //   attachment: 'bottom right',
+  //   targetAttachment: 'center left',
+  //   // offset: '20px 0px',
+  //   targetOffset: '250px 340px'
+  // });
+  // new Tether({
+  //   element: losAngeles,
+  //   target: map,
+  //   attachment: 'bottom right',
+  //   targetAttachment: 'center left',
+  //   // offset: '20px 0px',
+  //   targetOffset: '200px 365px'
+  // });
+  // new Tether({
+  //   element: orangeCounty,
+  //   target: map,
+  //   attachment: 'bottom right',
+  //   targetAttachment: 'center left',
+  //   // offset: '20px 0px',
+  //   targetOffset: '255px 390px'
+  // });
+  // new Tether({
+  //   element: palmSprings,
+  //   target: map,
+  //   attachment: 'bottom right',
+  //   targetAttachment: 'center left',
+  //   // offset: '20px 0px',
+  //   targetOffset: '245px 480px'
+  // });
+  // new Tether({
+  //   element: sanDiego,
+  //   target: map,
+  //   attachment: 'bottom right',
+  //   targetAttachment: 'center left',
+  //   // offset: '20px 0px',
+  //   targetOffset: '300px 460px'
+  //   });
 // for (i = 0; i < ids.length; i++) {
 //    drop = new Drop({
 //         target: document.querySelector("#" + ids[i]),
@@ -225,7 +225,7 @@ function start() {
 //     });
 // }
     drop = new Drop({
-        target: document.querySelector('#eureka'),
+        target: document.querySelector('#humbolt'),
         content: list[0],
         position: 'left top',
         openOn: 'click',
