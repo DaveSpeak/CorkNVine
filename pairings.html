@@ -111,10 +111,10 @@
 
     <div class="container">
      <div class="row" style="margin:50px;">
-  <h1>Here's the wines we think you'll like:</h1><br>
+  <h1 style="color:white;">Here's the wines we think you'll like:</h1><br>
 </div>
 <br>
-<div class="row" style="margin:50px; color:black;" id='pairings'>
+<div class="row" style="margin:50px; color:white;" id='pairings'>
 
   
 </div>
@@ -138,14 +138,15 @@ var choiceRef = database.ref("/choices");
 $(document).ready(function() {
   choiceRef.on('value', function(snap){
     var temp=snap.val();
+    console.log(temp);
     for (j=0;j<temp.length;j++){
       // console.log(temp[j].name, temp[j].url);
-      var inserthtml=$('<h2>').html(temp[j].name).append('<br>');
+      var inserthtml=$('<h3>').html(temp[j].name).append('<br>');
       // var inserthtml=$('<h2>').html(temp[j].name).append('<br>',$('<a>').attr('href', temp[j].url));
       // inserthtml.append($('<a>')).attr('href',temp[j].url);
-      $('#pairingsResults').append(inserthtml);
-      inserthtml=$('<a>').attr('href',temp[j].url).html('<h3>'+temp[j].url);
-      $('#pairingsResults').append(inserthtml);
+      $('#pairings').append(inserthtml);
+      inserthtml=$('<a>').attr('href',temp[j].url).html('<h4>'+temp[j].url);
+      $('#pairings').append(inserthtml);
    }
   });
 });
