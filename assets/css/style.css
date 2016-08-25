@@ -24,6 +24,9 @@ nav.navbar.navbar-default {
   background-color: rgba(0, 0, 0, 0.65);
   min-height: 100px;
 }
+nav.navbar.navbar-light {
+  margin-left: 35px;
+}
 .navbar {
   min-height: 0;
   margin-bottom: 1px; 
@@ -372,7 +375,7 @@ div.drop-content {
   color: #b2b266;
   }*/
 
-#humbolt,
+#humboldt,
 #mendocino,
 #sonoma,
 #napa,
@@ -401,7 +404,7 @@ div.drop-content {
 #malibu {
   background-color: #fff9e6;
 }
-#humbolt {
+#humboldt {
 margin-left: 20px;
 margin-top: 75px;
 }
@@ -507,6 +510,40 @@ margin-top: 630px;
 
 #menuPairings {
   margin-left: 200px;
+}
+
+#wineTypes {
+  background: rgba(0, 0, 0, 0.75);
+  /*height: 600px;*/
+  width: 720px;
+  padding-left:10px;
+  margin-bottom: 15px;
+  margin-left: 130px;
+}
+
+#wineTypes>li {
+  width: 700px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  margin-top: 30px;
+}
+
+#wineTypes>li>p {
+  color: #ffffff;
+  margin-top: 10px;
+  
+
+}
+#wineTypes>h5 {
+  padding-bottom: 5px;
+  color: #660022;
+  text-align: center;
+  width: 700px;
+  background-color: rgba(255,255,255, 0.55);
+  -webkit-text-stroke: 1px #660022;
+  font-size: 26px;
+  font-family: 'IM Fell DW Pica SC', serif;
+  font-weight: 300;
 }
 
 footer.sticky {
