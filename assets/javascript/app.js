@@ -117,85 +117,85 @@ $('#addLocation').on('click', function(){
 							// locationRef.set(title);
 					});
 					return false;
-// firebase.initializeApp(config);
-// var database = firebase.database();
-// var choiceRef = database.ref("/choices");
-// var locationRef = database.ref("/locations");
+firebase.initializeApp(config);
+var database = firebase.database();
+var choiceRef = database.ref("/choices");
+var locationRef = database.ref("/locations");
 
-// // $(document).ready(function() {
-// 	// populate drink match list
-// 	populateMenu('drinkmatchlist',matchDrink,'drinkMatch');
-// 	// populate food match list
-// 	populateMenu('right-side',matchFood,'foodMatch');
-// });
-// function populateMenu(menuId,itemId,classId){
-// 	for (var i=0;i<itemId.length;i++){
-// 		$('#'+menuId).append($('<li>').html($('<a>').attr({'class':classId,'value':itemId[i].like})
-// 			.html(itemId[i].title)));
-// 	}
-// 	$('.'+classId).on('click',function(){
-// 		for (var i=0;i<itemId.length;i++){
-// 			if ($(this).attr('value')==itemId[i].like){
-// 				console.log('You like '+($(this).attr('value'))+', so we think you\'ll like '+itemId[i].match);
-// 				var searchTerm="https://www.googleapis.com/customsearch/v1?key=AIzaSyCMGfdDaSfjqv5zYoS0mTJnOT3e9MURWkU&cx=005427488377789592791:p7w1yrvn9co&q=";
-// 				var terms=itemId[i].match;
-// 				terms=terms.replace(/[!@#$%^&*()+=\[\]\{\}\:\;\'\",.<>?/\\|`~]/g,'');
-// 				terms=terms.replace(/ /g,'+');
-// 				searchTerm+=terms;
-// 				var database = firebase.database();
-// var choiceRef = database.ref("/choices");
-// 				// console.log(searchTerm);
-// 					$.ajax({url: searchTerm, method: "GET"}) 
-// 						.done(function(RETURN) {
-// 						var title=[];
-// 						for (var j=0;j<10;j++){
-// 							title[j] = {
-// 							 name:RETURN.items[j].title,
-// 							 url:RETURN.items[j].link
-// 							};
-// 							choiceRef.push(title[j]);
-// 							console.log(title[j]);
-// 						}
-// 							// choiceRef.set(title);
-// 					});
-// 			}
-// 		}
-// 		setTimeout("pageRedirect('pairings.html')",1000);
-// 		});
-// }
-// function pageRedirect(destination){
-// 	window.location.href=destination;
-// 	return false;
-// }
+$(document).ready(function() {
+	// populate drink match list
+	populateMenu('drinkmatchlist',matchDrink,'drinkMatch');
+	// populate food match list
+	populateMenu('right-side',matchFood,'foodMatch');
+});
+function populateMenu(menuId,itemId,classId){
+	for (var i=0;i<itemId.length;i++){
+		$('#'+menuId).append($('<li>').html($('<a>').attr({'class':classId,'value':itemId[i].like})
+			.html(itemId[i].title)));
+	}
+	$('.'+classId).on('click',function(){
+		for (var i=0;i<itemId.length;i++){
+			if ($(this).attr('value')==itemId[i].like){
+				console.log('You like '+($(this).attr('value'))+', so we think you\'ll like '+itemId[i].match);
+				var searchTerm="https://www.googleapis.com/customsearch/v1?key=AIzaSyCMGfdDaSfjqv5zYoS0mTJnOT3e9MURWkU&cx=005427488377789592791:p7w1yrvn9co&q=";
+				var terms=itemId[i].match;
+				terms=terms.replace(/[!@#$%^&*()+=\[\]\{\}\:\;\'\",.<>?/\\|`~]/g,'');
+				terms=terms.replace(/ /g,'+');
+				searchTerm+=terms;
+				var database = firebase.database();
+				var choiceRef = database.ref("/choices");
+				// console.log(searchTerm);
+					$.ajax({url: searchTerm, method: "GET"}) 
+						.done(function(RETURN) {
+						var title=[];
+						for (var j=0;j<10;j++){
+							title[j] = {
+							 name:RETURN.items[j].title,
+							 url:RETURN.items[j].link
+							};
+							choiceRef.push(title[j]);
+							console.log(title[j]);
+						}
+							// choiceRef.set(title);
+					});
+			}
+		}
+		setTimeout("pageRedirect('pairings.html')",1000);
+		});
+}
+function pageRedirect(destination){
+	window.location.href=destination;
+	return false;
+}
 
-// $('#strange').on('click', function(){
-// 	var select=Math.floor(Math.random()*strangeFacts.length);
-// 	console.log(select);
-// 	alert(strangeFacts[select]);
-// 	return false;
-// });
-// $('#addLocation').on('click', function(){
-// 				var searchTerm="https://www.googleapis.com/customsearch/v1?key=AIzaSyCMGfdDaSfjqv5zYoS0mTJnOT3e9MURWkU&cx=005427488377789592791:p7w1yrvn9co&q=vineyard+";
-// 				var terms=$('#location-input').val().trim();;
-// 				terms=terms.replace(/[!@#$%^&*()+=\[\]\{\}\:\;\'\",.<>?/\\|`~]/g,'');
-// 				terms=terms.replace(/ /g,'+');
-// 				searchTerm+=terms;
-// 				console.log(searchTerm);
-// 					$.ajax({url: searchTerm, method: "GET"}) 
-// 						.done(function(RETURN) {
-// 						var title=[];
-// 						console.log('got here');
-// 						for (var j=0;j<10;j++){
-// 							title[j] = {
-// 							 name:RETURN.items[j].title,
-// 							 url:RETURN.items[j].link
-// 							};
-// 							console.log(title[j]);
-// 						}
-// 							// locationRef.set(title);
-// 					});
-// 					return false;
-// });
+$('#strange').on('click', function(){
+	var select=Math.floor(Math.random()*strangeFacts.length);
+	console.log(select);
+	alert(strangeFacts[select]);
+	return false;
+});
+$('#addLocation').on('click', function(){
+				var searchTerm="https://www.googleapis.com/customsearch/v1?key=AIzaSyCMGfdDaSfjqv5zYoS0mTJnOT3e9MURWkU&cx=005427488377789592791:p7w1yrvn9co&q=vineyard+";
+				var terms=$('#location-input').val().trim();;
+				terms=terms.replace(/[!@#$%^&*()+=\[\]\{\}\:\;\'\",.<>?/\\|`~]/g,'');
+				terms=terms.replace(/ /g,'+');
+				searchTerm+=terms;
+				console.log(searchTerm);
+					$.ajax({url: searchTerm, method: "GET"}) 
+						.done(function(RETURN) {
+						var title=[];
+						console.log('got here');
+						for (var j=0;j<10;j++){
+							title[j] = {
+							 name:RETURN.items[j].title,
+							 url:RETURN.items[j].link
+							};
+							console.log(title[j]);
+						}
+							// locationRef.set(title);
+					});
+					return false;
+});
 
 
   // Initial array of comedians
@@ -272,5 +272,5 @@ return false;
 //         classes: 'drop-theme-arrows-bounce-dark'
 //     };
 
-});
+// });
 
