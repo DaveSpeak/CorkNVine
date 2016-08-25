@@ -48,6 +48,7 @@ var matchFood=[
 var database = firebase.database();
 var choiceRef = database.ref("/choices");
 var locationRef = database.ref("/locations");
+var eventRef = database.ref("/events");
 
 $(document).ready(function() {
 	// populate drink match list
@@ -91,6 +92,7 @@ function populateMenu(menuId,itemId,classId){
 		setTimeout("pageRedirect('pairings.html')",1000);
 		// pageRedirect('dummy.html');
 		});
+	return false;
 }
 function pageRedirect(destination){
 	window.location.href=destination;
@@ -103,12 +105,11 @@ $('#strange').on('click', function(){
 	return false;
 });
 $('#addLocation').on('click', function(){
-				var searchTerm="https://www.googleapis.com/customsearch/v1?key=AIzaSyCMGfdDaSfjqv5zYoS0mTJnOT3e9MURWkU&cx=005427488377789592791:mcug_u68wl4&q=vineyard+";
+				var searchTerm="https://www.googleapis.com/customsearch/v1?key=AIzaSyCMGfdDaSfjqv5zYoS0mTJnOT3e9MURWkU&cx=005427488377789592791:mcug_u68wl4&q=wine+";
 				var terms=$('#location-input').val().trim();;
 				terms=terms.replace(/[!@#$%^&*()+=\[\]\{\}\:\;\'\",.<>?/\\|`~]/g,'');
 				terms=terms.replace(/ /g,'+');
 				searchTerm+=terms;
-				console.log(searchTerm);
 					$.ajax({url: searchTerm, method: "GET"}) 
 						.done(function(RETURN) {
 						var title=[];
@@ -118,15 +119,15 @@ $('#addLocation').on('click', function(){
 							 name:RETURN.items[j].title,
 							 url:RETURN.items[j].link
 							};
-							console.log(title[j]);
 						}
-							// locationRef.set(title);
+							eventRef.set(title);
 					});
+					setTimeout("pageRedirect('events.html')",1000);
 					return false;
 });
 
-    var listGift = [];
-    giftList = Math.floor(Math.random() * names.length); 
+    // var listGift = [];
+    // giftList = Math.floor(Math.random() * names.length); 
 
 // drop = new Drop{
 //         target: document.querySelector('#gifts'),
