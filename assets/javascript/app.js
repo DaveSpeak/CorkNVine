@@ -198,12 +198,10 @@ $('#addLocation').on('click', function(){
 // });
 
 
-  // Initial array of comedians
 var quote = [];
 
   function quoteInfo(){
 
-    // $('button.comedian').on('mouseover', function() {
     	 $('#front-quote').on('hover', function() {
         var quote = $(this).attr('data-name');
 
@@ -262,15 +260,6 @@ return false;
     	 })
     
 });
-
-
-// drop = new Drop{
-//         target: document.querySelector('#gifts'),
-//         content: giftList[,
-//         position: 'left top',
-//         openOn: 'click',
-//         classes: 'drop-theme-arrows-bounce-dark'
-//     };
 
 });
 
