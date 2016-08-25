@@ -57,154 +57,154 @@ function start() {
         target: document.querySelector('#humboldt'),
         content: list[0],
         position: 'left top',
-        openOn: 'click',
+        openOn: 'hover',
         classes: 'drop-theme-arrows-bounce-dark'
     });
     drop = new Drop({
         target: document.querySelector('#mendocino'),
         content: list[1],
         position: 'left middle',
-        openOn: 'click',
+        openOn: 'hover',
         classes: 'drop-theme-arrows-bounce-dark'
     });
     drop = new Drop({
         target: document.querySelector('#sonoma'),
         content: list[2],
         position: 'left middle',
-        openOn: 'click',
+        openOn: 'hover',
         classes: 'drop-theme-arrows-bounce-dark'
     });
     drop = new Drop({
         target: document.querySelector('#napa'),
         content: list[3],
         position: 'left bottom',
-        openOn: 'click',
+        openOn: 'hover',
         classes: 'drop-theme-arrows-bounce-dark'
     });
     drop = new Drop({
         target: document.querySelector('#sacramento'),
         content: list[4],
         position: 'right middle',
-        openOn: 'click',
+        openOn: 'hover',
         classes: 'drop-theme-arrows-bounce-dark'
     });
     drop = new Drop({
         target: document.querySelector('#sanFrancisco'),
         content: list[5],
         position: 'left middle',
-        openOn: 'click',
+        openOn: 'hover',
         classes: 'drop-theme-arrows-bounce-dark'
     });
     drop = new Drop({
         target: document.querySelector('#lodi'),
         content: list[6],
         position: 'right middle',
-        openOn: 'click',
+        openOn: 'hover',
         classes: 'drop-theme-arrows-bounce-dark'
     });
     drop = new Drop({
         target: document.querySelector('#livermore'),
         content: list[7],
         position: 'left bottom',
-        openOn: 'click',
+        openOn: 'hover',
         classes: 'drop-theme-arrows-bounce-dark'
     });
     drop = new Drop({
         target: document.querySelector('#modesto'),
         content: list[8],
         position: 'right bottom',
-        openOn: 'click',
+        openOn: 'hover',
         classes: 'drop-theme-arrows-bounce-dark'
     });
     drop = new Drop({
         target: document.querySelector('#santaCruz'),
         content: list[9],
         position: 'left middle',
-        openOn: 'click',
+        openOn: 'hover',
         classes: 'drop-theme-arrows-bounce-dark'
     });
     drop = new Drop({
         target: document.querySelector('#monterey'),
         content: list[10],
         position: 'left middle',
-        openOn: 'click',
+        openOn: 'hover',
         classes: 'drop-theme-arrows-bounce-dark'
     });
     drop = new Drop({
         target: document.querySelector('#sierra'),
         content: list[11],
         position: 'right middle',
-        openOn: 'click',
+        openOn: 'hover',
         classes: 'drop-theme-arrows-bounce-dark'
     });
     drop = new Drop({
         target: document.querySelector('#madera'),
         content: list[12],
         position: 'right bottom',
-        openOn: 'click',
+        openOn: 'hover',
         classes: 'drop-theme-arrows-bounce-dark'
     });
     drop = new Drop({
         target: document.querySelector('#fresno'),
         content: list[13],
         position: 'right middle',
-        openOn: 'click',
+        openOn: 'hover',
         classes: 'drop-theme-arrows-bounce-dark'
     });
     drop = new Drop({
         target: document.querySelector('#sanLuis'),
         content: list[14],
         position: 'left top',
-        openOn: 'click',
+        openOn: 'hover',
         classes: 'drop-theme-arrows-bounce-dark'
     });
     drop = new Drop({
         target: document.querySelector('#santaBarbara'),
         content: list[15],
         position: 'left top',
-        openOn: 'click',
+        openOn: 'hover',
         classes: 'drop-theme-arrows-bounce-dark'
     });
     drop = new Drop({
         target: document.querySelector('#venturaCounty'),
         content: list[16],
         position: 'left middle',
-        openOn: 'click',
+        openOn: 'hover',
         classes: 'drop-theme-arrows-bounce-dark'
     });
     drop = new Drop({
         target: document.querySelector('#malibu'),
         content: list[17],
         position: 'left middle',
-        openOn: 'click',
+        openOn: 'hover',
         classes: 'drop-theme-arrows-bounce-dark'
     });
     drop = new Drop({
         target: document.querySelector('#losAngeles'),
         content: list[18],
         position: 'right bottom',
-        openOn: 'click',
+        openOn: 'hover',
         classes: 'drop-theme-arrows-bounce-dark'
     });
     drop = new Drop({
         target: document.querySelector('#orangeCounty'),
         content: list[9],
         position: 'left middle',
-        openOn: 'click',
+        openOn: 'hover',
         classes: 'drop-theme-arrows-bounce-dark'
     });
     drop = new Drop({
         target: document.querySelector('#palmSprings'),
         content: list[20],
         position: 'right bottom',
-        openOn: 'click',
+        openOn: 'hover',
         classes: 'drop-theme-arrows-bounce-dark'
     });
     drop = new Drop({
         target: document.querySelector('#sanDiego'),
         content: list[21] + " " + list[20], 
         position: 'left middle',
-        openOn: 'click',
+        openOn: 'hover',
         classes: 'drop-theme-arrows-bounce-dark'
     });
   };
