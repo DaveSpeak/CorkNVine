@@ -126,7 +126,7 @@ h6 {
   text-align: center;
 }
 
-#facts {
+#strange {
   margin-left: 370px;
   width: 160px;
   margin-top: -110px;
@@ -255,6 +255,8 @@ ul.sidebar>li {
   height: 100%;
   min-height: 150px;
   width: 150px;
+  line-height: 20px;
+  padding-top: 10px;
   background-color: #fff9e6;
   text-align: center;
   padding: 10px;
@@ -370,7 +372,7 @@ div.drop-content {
   color: #b2b266;
   }*/
 
-#eureka,
+#humbolt,
 #mendocino,
 #sonoma,
 #napa,
@@ -399,7 +401,94 @@ div.drop-content {
 #malibu {
   background-color: #fff9e6;
 }
-
+#humbolt {
+margin-left: 20px;
+margin-top: 75px;
+}
+#mendocino {
+margin-left: 40px;
+margin-top: 160px;
+}
+#sonoma {
+margin-left: 60px;
+margin-top: 220px;
+}
+#napa {
+margin-left: 100px;
+margin-top: 230px;
+}
+#sacramento {
+margin-left: 155px;
+margin-top: 230px;
+}
+#sanFrancisco {
+margin-left: 80px;
+margin-top: 300px;
+}
+#lodi {
+margin-left: 170px;
+margin-top: 270px;
+}
+#livermore {
+margin-left: 140px;
+margin-top: 300px;
+}
+#modesto {
+margin-left: 190px;
+margin-top: 290px;
+}
+#santaCruz {
+margin-left: 110px;
+margin-top: 360px;
+}
+#monterey {
+margin-left: 140px;
+margin-top: 395px;
+}
+#sierra {
+margin-left: 180px;
+margin-top: 170px;
+}
+#madera {
+margin-left: 265px;
+margin-top: 325px;
+}
+#fresno {
+margin-left: 265px;
+margin-top: 360px;
+}
+#sanLuis {
+margin-left: 195px;
+margin-top: 455px;
+}
+#santaBarbara {
+margin-left: 205px;
+margin-top: 525px;
+}
+#venturaCounty {
+margin-left: 275px;
+margin-top: 525px;
+}
+#malibu {
+margin-left: 305px;
+margin-top: 580px;
+}
+#losAngeles {
+margin-left: 330px;
+margin-top: 535px;
+}
+#orangeCounty {
+margin-left: 370px;
+margin-top: 585px;
+}
+#palmSprings {
+margin-left: 450px;
+margin-top: 575px;
+}
+#sanDiego {
+margin-left: 430px;
+margin-top: 630px;
+}
 
 #map { 
   height: 700px; 
