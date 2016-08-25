@@ -41,7 +41,7 @@ nav.navbar.navbar-light {
 }
 
 a.nav-item.nav-link {
-  color: linen;
+  color: #fff9e6;
 /*  padding-left: 30px;
 */  padding-right: 30px;
   text-decoration: none;
@@ -122,10 +122,10 @@ h6 {
   padding-top: 10px;
 }
 
-#region {
-  margin-left: 125px;
-  margin-top: 40px;
-  width: 100px;
+#types {
+  margin-left: 90px;
+  margin-top: 80px;
+  width: 170px;
   text-align: center;
 }
 
@@ -167,13 +167,14 @@ button.dropdown-toggle {
   margin-right: 20px;
   padding: 5px;
   color: #660022;
-  background-color: linen;
+  background-color: #fff9e6;
 }
 
 .dropdown-menu {
   width: 285px;
   margin-left: 10px;
   padding: 0;
+  background-color: #fff9e6;
 }
 
 #right-side {
@@ -198,7 +199,7 @@ li>a {
 #vineyards {
   margin-left: 370px;
   width: 170px;
-  margin-top: 35px;
+  margin-top: 55px;
 }
 
 input#location-input {
@@ -241,6 +242,11 @@ ul.sidebar>li {
 #gifts {
   margin-top: 70px;
   margin-left: 20px;
+}
+
+#dayWine>img,
+#gifting>img {
+  border-radius: 6px;
 }
 
 #wineDay {
@@ -351,8 +357,8 @@ div.drop-content {
   font-size: 14px;
   text-align: center;
   background-color: #fff9e6;
-  height: 300px;
-  width: 250px;
+  min-height: 150px;
+  min-width: 150px;
   margin: 10px;
   z-index: 2;
 }
@@ -508,10 +514,7 @@ margin-top: 630px;
 
 }
 
-#menuPairings {
-  margin-left: 200px;
-}
-
+#suggestions,
 #wineTypes {
   background: rgba(0, 0, 0, 0.75);
   /*height: 600px;*/
@@ -531,9 +534,8 @@ margin-top: 630px;
 #wineTypes>li>p {
   color: #ffffff;
   margin-top: 10px;
-  
-
 }
+
 #wineTypes>h5 {
   padding-bottom: 5px;
   color: #660022;
@@ -544,6 +546,51 @@ margin-top: 630px;
   font-size: 26px;
   font-family: 'IM Fell DW Pica SC', serif;
   font-weight: 300;
+}
+
+#menuPairings {
+  margin-left: 150px;
+  width: 720px;
+}
+
+#suggestions {
+
+}
+#menuPairings>li.menu {
+  height: 80px;
+  margin-left: 45px;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+#pairings>h3 {
+ color: #660022;
+ width: 715px;
+ margin-left: 10px;
+ padding: 5px;
+  text-align: center;
+  background-color: rgba(255,255,255, 0.75);
+  -webkit-text-stroke: 1px #660022;
+  font-size: 18px;
+  font-family: 'IM Fell DW Pica SC', serif;
+  font-weight: 300;
+  position: relative;
+}
+
+#pairings>a>h4 {
+  margin: 0;
+  font-size: 16px;
+  padding: 10px 10px;
+  width: 720px;
+  text-align: center;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+#pairings>a>h4:hover {
+  color: #4d9900;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 footer.sticky {
