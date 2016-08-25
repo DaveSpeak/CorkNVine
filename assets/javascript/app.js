@@ -99,7 +99,7 @@ $('#strange').on('click', function(){
 	return false;
 });
 $('#addLocation').on('click', function(){
-				var searchTerm="https://www.googleapis.com/customsearch/v1?key=AIzaSyCMGfdDaSfjqv5zYoS0mTJnOT3e9MURWkU&cx=005427488377789592791:p7w1yrvn9co&q=vineyard+";
+				var searchTerm="https://www.googleapis.com/customsearch/v1?key=AIzaSyCMGfdDaSfjqv5zYoS0mTJnOT3e9MURWkU&cx=005427488377789592791:mcug_u68wl4&q=vineyard+";
 				var terms=$('#location-input').val().trim();;
 				terms=terms.replace(/[!@#$%^&*()+=\[\]\{\}\:\;\'\",.<>?/\\|`~]/g,'');
 				terms=terms.replace(/ /g,'+');
