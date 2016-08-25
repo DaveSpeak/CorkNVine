@@ -1,3 +1,46 @@
+var listGift = ['<a href="gifts.html">Gift</a>', 'blah', 'blah'];
+var giftList = Math.floor(Math.random() * listGift.length); 
+
+var listWine = ['<a href="wineDay.html">Wine of the Day</a>', 'blah', 'blah'];
+var wineList = Math.floor(Math.random() * listWine.length); 
+
+
+    if (document.readyState != 'loading'){
+    start();
+} else {
+    document.addEventListener('DOMContentLoaded', gifting);
+}
+
+function gifting() {
+
+
+drop = new Drop({
+        target: document.querySelector('#gifting'),
+        content: listGift[0],
+        position: 'center center',
+        openOn: 'hover',
+        classes: 'drop-theme-arrows-bounce-dark'
+    });
+};
+
+    if (document.readyState != 'loading'){
+    start();
+} else {
+    document.addEventListener('DOMContentLoaded', wining);
+}
+
+function wining() {
+
+drop = new Drop({
+        target: document.querySelector('#dayWine'),
+        content: listWine[0],
+        position: 'center center',
+        openOn: 'hover',
+        classes: 'drop-theme-arrows-bounce-dark'
+    });
+};
+
+
 $(document).ready(function() {
 
 var strangeFacts=[
@@ -106,7 +149,7 @@ $('#addLocation').on('click', function(){
 					$.ajax({url: searchTerm, method: "GET"}) 
 						.done(function(RETURN) {
 						var title=[];
-						console.log(RETURN);
+						console.log('got here');
 						for (var j=0;j<10;j++){
 							title[j] = {
 							 name:RETURN.items[j].title,
@@ -195,37 +238,8 @@ $('#addLocation').on('click', function(){
 // 							// locationRef.set(title);
 // 					});
 // 					return false;
-// });
-
-
-var quote = [];
-
-  function quoteInfo(){
-
-    	 $('#front-quote').on('hover', function() {
-        var quote = $(this).attr('data-name');
-
-        console.log(quote);
-
-        var queryURL = "http://quotes.rest/quote?category=<wine>&maxlength=300api";
-
-        $.ajax({
-            url: queryURL,
-            method: 'GET'
-          })
-
-          .done(function(response) {
-          	var quoteDiv = $('<div class="quote">');
-
-          	quoteDiv.push(quote);
-          });
-
-name.RETURN.quote;
-console.log(quote);
 });
-return false;
 
-};
 
       var quotes = ['“In victory, you deserve Champagne. In defeat you need it.” ― Napoleon Bonaparte',
        '“Beer is made by men, wine by God.”― Martin Luther', 
@@ -260,6 +274,8 @@ return false;
     	 })
     
 });
+
+
 
 });
 
