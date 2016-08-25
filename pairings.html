@@ -12,6 +12,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="assets/javascript/app.js"></script>
 
   <link href='https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica+SC' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Inknut+Antiqua:800' rel='stylesheet' type='text/css'>
@@ -51,25 +52,7 @@
               <div class="dropdown">
                 <button class="dropdown-toggle" type="button" data-toggle="dropdown">What wine would I like if I usually drink:
                   <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                      <li><a>Vodka straight or with water/club soda</a></li>
-                      <li><a>Vodka with sweet mixer</a></li>
-                      <li><a>Vodka with sour mixer</a></li>
-                      <li><a>Scotch straight or with water/club soda</a></li>
-                      <li><a>Rum straight or with water/club soda</a></li>
-                      <li><a>Rum with sweet mixer</a></li>
-                      <li><a>Rum with sour mixer</a></li>
-                      <li><a>Gin straight or with water/club soda</a></li>
-                      <li><a>Gin with sweet mixer</a></li>
-                      <li><a>Gin with sour mixer</a></li>
-                      <li><a>Tequila straight</a></li>
-                      <li><a>Tequila with sweet mixer</a></li>
-                      <li><a>Tequila with sour mixer</a></li>
-                      <li><a>Lager</a></li>
-                      <li><a>Ale</a></li>
-                      <li><a>Beer</a></li>
-                      <li><a>Hard Lemonade or Hard Iced Tea</a></li>
-                      <li><a>Other</a></li>
+                    <ul class="dropdown-menu" id="drinkmatchlist">
                     </ul>
               </div>
  
@@ -77,15 +60,6 @@
                 <button class="dropdown-toggle" type="button" data-toggle="dropdown">Match wines with this type of food:
                   <span class="caret"></span></button>
                     <ul class="dropdown-menu" id="right-side">
-                      <li><a>Red Meat</a></li>
-                      <li><a>Poultry</a></li>
-                      <li><a>Fish</a></li>
-                      <li><a>Light meal or appetizers</a></li>
-                      <li><a>Salty</a></li>
-                      <li><a>Tart</a></li>
-                      <li><a>Spicy</a></li>
-                      <li><a>Sweet with chocolate</a></li>
-                      <li><a>Other sweets</a></li>
                     </ul>
               </div>
             </li>
@@ -121,6 +95,10 @@ var database = firebase.database();
 var choiceRef = database.ref("/choices");
 
 $(document).ready(function() {
+  // populate drink match list
+  populateMenu('drinkmatchlist',matchDrink,'drinkMatch');
+  // populate food match list
+  populateMenu('right-side',matchFood,'foodMatch');
   choiceRef.on('value', function(snap){
     var temp=snap.val();
     console.log(temp);

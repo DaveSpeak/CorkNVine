@@ -108,7 +108,7 @@ $('#addLocation').on('click', function(){
 					$.ajax({url: searchTerm, method: "GET"}) 
 						.done(function(RETURN) {
 						var title=[];
-						console.log('got here');
+						console.log(RETURN);
 						for (var j=0;j<10;j++){
 							title[j] = {
 							 name:RETURN.items[j].title,
