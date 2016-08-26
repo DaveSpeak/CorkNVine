@@ -209,5 +209,38 @@ function start() {
     });
   };
 
+
+  // var config = {
+  //   apiKey: "AIzaSyBlMaraNlThfpxmkyToi52NGL2HXuTZjOE",
+  //   authDomain: "corknvine-6d5a8.firebaseapp.com",
+  //   databaseURL: "https://corknvine-6d5a8.firebaseio.com",
+  //   storageBucket: "corknvine-6d5a8.appspot.com",
+  // };
+  // firebase.initializeApp(config);
+  // var database = firebase.database();
+  // var choiceRef = database.ref("/choices");
+  // var eventRef = database.ref("/events");
+
+  
+
+// $(document).ready(function() {
+//   eventRef.on('value', function(snap){
+//     var temp=snap.val();
+//     console.log(temp);
+//     for (j=0;j<temp.length;j++){
+//       // console.log(temp[j].name, temp[j].url);
+//       var inserthtml=$('<h3>').html(temp[j].name).append('<br>');
+//       // var inserthtml=$('<h2>').html(temp[j].name).append('<br>',$('<a>').attr('href', temp[j].url));
+//       // inserthtml.append($('<a>')).attr('href',temp[j].url);
+//       $('#eventResults').append(inserthtml);
+//       inserthtml=$('<a>').attr('href',temp[j].url).html('<h4>'+temp[j].url);
+//       $('#eventResults').append(inserthtml);
+//    }
+//   });
+// });
+
+
+
+
 });
 
