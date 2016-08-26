@@ -122,17 +122,22 @@ h6 {
   padding-top: 10px;
 }
 
+#region {
+    margin-left: 95px;
+    margin-top: 80px;
+}
+
 #types {
   margin-left: 90px;
-  margin-top: 80px;
+  margin-top: 90px;
   width: 170px;
   text-align: center;
 }
 
-#strange {
+#events {
   margin-left: 370px;
   width: 160px;
-  margin-top: -110px;
+  margin-top: -140px;
 }
 
 #main-list>li {
@@ -199,7 +204,7 @@ li>a {
 #vineyards {
   margin-left: 370px;
   width: 170px;
-  margin-top: 55px;
+  margin-top: 65px;
 }
 
 input#location-input {
@@ -217,10 +222,10 @@ button#addLocation {
   font-family: Arial;
 }
 
-#events {
-  margin-left: 120px;
-  width: 120px;
-  margin-top: 70px;
+#strange {
+  margin-left: 85px;
+  width: 180px;
+  margin-top: 80px;
 }
 
 ul.sidebar>li {
@@ -239,7 +244,7 @@ ul.sidebar>li {
   margin-top: 20px;
 }
 
-#gifts {
+#giftsI {
   margin-top: 70px;
   margin-left: 20px;
 }
