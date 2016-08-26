@@ -58,27 +58,34 @@ $(document).ready(function() {
 
 function chooseWine() {
 
+  
 
-        var queryURL = "http://api.snooth.com/wines/?akey=wy1wfb4xvzcqbqhvvxf5yay3z8yt9vynuftd6n80bi9y9f56&q=wine&n=1&sr";
+  $.ajax({
+            url: 'http://api.snooth.com/wines/?akey=wy1wfb4xvzcqbqhvvxf5yay3z8yt9vynuftd6n80bi9y9f56&q=wine&n=1&sr',
+            method: 'GET',
+        }).done(function(response) {
+           console.log(JSON.parse(response));
+        // });
 
-        $.ajax({
-            url: queryURL,
-            dataType: "json",
-            // data: data,
-            // data: { 
-            //   name: value,
-            //   image: value},
-            type: 'GET'
-          })
+        // var queryURL = "http://api.snooth.com/wines/?akey=wy1wfb4xvzcqbqhvvxf5yay3z8yt9vynuftd6n80bi9y9f56&q=wine&n=1&sr";
+
+        // $.ajax({
+        //     url: queryURL,
+        //     dataType: "json",
+           
+        //     type: 'GET'
+        //   })
         
-          .done(function(response) {
+          // .done(function(response) {
              var info = response.wines;
+
 
             console.log("info = " + info);
             //  results = response.wines;
              var nameW = info.name;
             var imageW = info.image;
 
+console.log(JSON.parse(response));
              console.log("name = " + nameW);
             console.log("image = " + imageW);
             var imageWine = $('<img>').attr('src', imageW);
@@ -98,7 +105,7 @@ function chooseWine() {
  
             });
 
-//          
+//          console.log(JSON.parse(response));
 
 //     if (document.readyState != 'loading'){
 //     start();
