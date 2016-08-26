@@ -1,0 +1,79 @@
+ .bg{
+	
+	position:fixed;
+	width:100%;
+	height:150px; same as jumbotron
+	top:0;
+	left:0;
+	z-index: -1;
+	background-color:lightyellow;
+}
+.jumbotron{
+	background-image: url("../images/wine-banner.jpeg");
+	margin-bottom: 0px;
+	height:150px;
+	max-width: 100%
+	
+	text-shadow: black 0.2em 0.2em 0.2em;
+}
+html body{
+	background-color: #43131D;
+
+}
+.panel-default >.panel-heading {
+	background-color:#68424A;
+}
+/*panel-heading.panel.panel-default {
+	background-color: #a36324;
+}*/
+.panel-default >.panel-title{
+	background-color: #a36324;
+}
+
+.panel-body-default >.panel-body {
+	background-color: #68424A;
+	text-align:left;
+	font-size:24px;
+	max-height: 300px;
+	overflow-y: auto;
+}
+table{
+	max-width:500px;
+}
+thead{
+	background-color: purple;
+}
+tbody{
+		background-color: #68424A;
+		text-align: left;
+		color:#E4DDDF;
+}
+.personality{
+	color:#E4DDDF;
+	background-color:#68424A;
+
+}
+.button-default >.button{
+	background-color: none;
+	font-size:15px;
+}
+#pModal{
+	background-color: #957A80
+	color:#E4DDDF;
+	font-size: 15px;
+	text-align:left;
+}
+h1{
+	font-size:32px;
+	font:black;
+	background-color:#957A80;
+}
+
+.imagegallery{
+	margin: 0px 40px;
+	
+}
+#myCarousel{
+	border-radius:10px;
+	border:2px black;
+}
