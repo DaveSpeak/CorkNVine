@@ -130,7 +130,7 @@ function populateMenu(menuId,itemId,classId){
 					});
 			}
 		}
-		setTimeout("pageRedirect('pairings.html')",1000);
+		setTimeout("pageRedirect('pairings.html')",2000);
 		// pageRedirect('dummy.html');
 		});
 }
@@ -144,9 +144,9 @@ $('#strange').on('click', function(){
 	alert(strangeFacts[select]);
 	return false;
 });
-$('#addLocation').on('click', function(){
+$('#location').on('click', function(){
 				var searchTerm="https://www.googleapis.com/customsearch/v1?key=AIzaSyCMGfdDaSfjqv5zYoS0mTJnOT3e9MURWkU&cx=005427488377789592791:mcug_u68wl4&q=wine+";
-				var terms=$('#location-input').val().trim();;
+				var terms=$('#location-input').val().trim();
 				terms=terms.replace(/[!@#$%^&*()+=\[\]\{\}\:\;\'\",.<>?/\\|`~]/g,'');
 				terms=terms.replace(/ /g,'+');
 				searchTerm+=terms;
@@ -162,9 +162,11 @@ $('#addLocation').on('click', function(){
 							};
 							console.log(title[j]);
 						}
-							// locationRef.set(title);
+							locationRef.set(title);
 					});
+		setTimeout("pageRedirect('events.html')",2000);
 					return false;
+});
 // firebase.initializeApp(config);
 // var database = firebase.database();
 // var choiceRef = database.ref("/choices");
@@ -243,7 +245,6 @@ $('#addLocation').on('click', function(){
 // 							// locationRef.set(title);
 // 					});
 // 					return false;
-});
 
 
 //       var quotes = ['“In victory, you deserve Champagne. In defeat you need it.” ― Napoleon Bonaparte',
