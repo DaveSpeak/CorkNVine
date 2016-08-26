@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Cork N Vine Main Page</title>
+
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link href='https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica+SC' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Inknut+Antiqua:800' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Sahitya:700' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <div><img src="assets/images/CnVheader3.png" id="title" alt=""></div>
+    </div>
+  </nav>
+
+
+  <div class="container-fluid full">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-7">
+          <ul class="main">
+            <li>
+              <a href="map.html"><h3 id="region">About Regions &amp; Grapes</h3><img src="assets/images/purple-grapes.png" class="img-group" alt=""></a>
+                
+              <a href=""><h3 id="facts">Strange Facts</h3></a><img src="assets/images/red-wine.png" class="img-group" alt=""></a>
+            </li>
+
+            <li class="menu">
+
+              <div class="dropdown">
+                <button class="dropdown-toggle" type="button" data-toggle="dropdown">What wine would I like if I usually drink:
+                  <span class="caret"></span></button>
+                    <ul class="dropdown-menu" id="drinkmatchlist">
+<!--                       <li><p class='drinkMatch' value='vodka-straight'>Vodka straight or with water/club soda</p></li>
+                      <li><p class='drinkMatch' value='vodka-sweet'>Vodka with sweet mixer</p></li>
+                      <li><p class='drinkMatch' value='vodka-sour'>Vodka with sour mixer</p></li>
+                      <li><p class='drinkMatch' value='scotch'>Scotch straight or with water/club soda</p></li>
+                      <li><p class='drinkMatch' value='rum-straight'>Rum straight or with water/club soda</p></li>
+                      <li><p class='drinkMatch' value='rum-sweet'>Rum with sweet mixer</p></li>
+                      <li><p class='drinkMatch' value='rum-sour'>Rum with sour mixer</p></li>
+                      <li><p class='drinkMatch' value='gin-straight'>Gin straight or with water/club soda</p></li>
+                      <li><p class='drinkMatch' value='gin-sweet'>Gin with sweet mixer</p></li>
+                      <li><p class='drinkMatch' value='gin-sour'>Gin with sour mixer</p></li>
+                      <li><p class='drinkMatch' value='tequila-straight'>Tequila straight</p></li>
+                      <li><p class='drinkMatch' value='tequila-sweet'>Tequila with sweet mixer</p></li>
+                      <li><p class='drinkMatch' value='tequila-sour'>Tequila with sour mixer</p></li>
+                      <li><p class='drinkMatch' value='lager'>Lager</p></li>
+                      <li><p class='drinkMatch' value='ale'>Ale</p></li>
+                      <li><p class='drinkMatch' value='beer'>Beer</p></li>
+                      <li><p class='drinkMatch' value='hard-lemonade'>Hard Lemonade or Hard Iced Tea</p></li>
+                      <li><p class='drinkMatch' value='other'>Other</p></li>
+ -->                    </ul>
+              </div>
+ 
+              <div class="dropdown">
+                <button class="dropdown-toggle" type="button" data-toggle="dropdown">Match wines with this type of food:
+                  <span class="caret"></span></button>
+                    <ul class="dropdown-menu" id="right-side">
+<!--                       <li><a href="#">Red Meat</a></li>
+                      <li><a href="#">Poultry</a></li>
+                      <li><a href="#">Fish</a></li>
+                      <li><a href="#">Light meal or appetizers</a></li>
+                      <li><a href="#">Salty</a></li>
+                      <li><a href="#">Tart</a></li>
+                      <li><a href="#">Spicy</a></li>
+                      <li><a href="#">Sweet with chocolate</a></li>
+                      <li><a href="#">Other sweets</a></li>
+ -->                    </ul>
+              </div>
+            </li>
+
+            <li>
+            <a href=""><h3 id="events">Events</h3></a>
+              <h3 id="vineyards">Vineyard Locations<form id="player-form">
+                <div id="location"><input type="text" id="location-input" placeholder="Enter a city or zip">
+                    <button type="submit" id="addLocation">Submit</button></div>
+              </h3></form>
+
+              <a href=""><img src="assets/images/tasting.png" class="img-group" alt=""></a>
+                <img src="assets/images/vineyard.png" class="img-group" alt=""></a>
+            </li>
+        </div>
+        
+        <div class="col-xs-4">
+          <div class = "rotating-sidebar">
+            <ul class="sidebar">
+              <li>
+                <div class="card-container">
+                  <div class="card">
+                    <div class="front"><h3 id="gifts">Gift Ideas</h3><a href=""><img src="assets/images/gifts.png" alt=""></a>
+                    </div>
+                      
+                    <div class="back"><h3 id="gift-back"></h3><a href=""><img src="http://placehold.it/150x150" alt=""></a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              
+              <li>
+                <div class="card-container">
+                  <div class="card">
+                    <div class="front"><h3 id="wineDay">Wine of the Day</h3><a href=""><img src="assets/images/wine-bottles-with-blank-labels.png" alt=""></a>
+                    </div>
+                    
+                    <div class="back"><h3 id="wine-back"></h3><a href=""><img src="http://placehold.it/150x150" alt=""></a></div>
+                  </div>
+                </div>
+              </li>
+           
+              <li>
+                <div class="card-container">
+                  <div class="card">
+                    <div class="front"><h3 id="randomQ">Random Quote</h3><a href=""><img src="assets/images/cork.png" alt=""></a>
+                    </div>
+                  
+                    <div class="back"><h6 id="quote-back"></h6>
+                    </div>
+                  </div>
+                </div>
+              </li>    
+          </div>    
+        </div>
+    </div>
+</div>
+
+    <div class="row">
+      <footer class = "sticky">
+        <footer id = "foot-content">
+          <h6>Cork N Vine</h6>
+        </footer> 
+      </footer> 
+    </div>
+  <script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
+</html>
