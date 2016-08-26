@@ -85,9 +85,9 @@ var locationRef = database.ref("/locations");
 
 // $(document).ready(function() {
   // populate drink match list
-  populateMenu('drinkmatchlist',matchDrink,'drinkMatch');
+  // populateMenu('drinkmatchlist',matchDrink,'drinkMatch');
   // populate food match list
-  populateMenu('right-side',matchFood,'foodMatch');
+  // populateMenu('right-side',matchFood,'foodMatch');
 // });
 // function populateMenu(menuId,itemId,classId){
 //   for (var i=0;i<itemId.length;i++){
@@ -126,10 +126,10 @@ var locationRef = database.ref("/locations");
 //     // pageRedirect('dummy.html');
 //     });
 // =======
-  firebase.initializeApp(config);
-var database = firebase.database();
-var choiceRef = database.ref("/choices");
-var locationRef = database.ref("/locations");
+//   firebase.initializeApp(config);
+// var database = firebase.database();
+// var choiceRef = database.ref("/choices");
+// var locationRef = database.ref("/locations");
 var eventRef = database.ref("/events");
 
 $(document).ready(function() {
@@ -173,7 +173,7 @@ function populateMenu(menuId,itemId,classId){
 		}
 		setTimeout("pageRedirect('pairings.html')",1000);
 		// pageRedirect('dummy.html');
-		});
+	});
 	return false;
 // >>>>>>> cef11725ecc66dcbc1c600d36d1d33086b7395f1
 }
@@ -189,27 +189,27 @@ $('#strange').on('click', function(){
 });
 $('#addLocation').on('click', function(){
 // <<<<<<< HEAD
-        var searchTerm="https://www.googleapis.com/customsearch/v1?key=AIzaSyCMGfdDaSfjqv5zYoS0mTJnOT3e9MURWkU&cx=005427488377789592791:mcug_u68wl4&q=vineyard+";
-        var terms=$('#location-input').val().trim();;
-        terms=terms.replace(/[!@#$%^&*()+=\[\]\{\}\:\;\'\",.<>?/\\|`~]/g,'');
-        terms=terms.replace(/ /g,'+');
-        searchTerm+=terms;
-        console.log(searchTerm);
-          $.ajax({url: searchTerm, method: "GET"}) 
-            .done(function(RETURN) {
-            var title=[];
-            console.log('got here');
-            for (var j=0;j<10;j++){
-              title[j] = {
-               name:RETURN.items[j].title,
-               url:RETURN.items[j].link
-              };
-              console.log(title[j]);
-            }
-              // locationRef.set(title);
-          });
-          return false;
-});
+//         var searchTerm="https://www.googleapis.com/customsearch/v1?key=AIzaSyCMGfdDaSfjqv5zYoS0mTJnOT3e9MURWkU&cx=005427488377789592791:mcug_u68wl4&q=vineyard+";
+//         var terms=$('#location-input').val().trim();;
+//         terms=terms.replace(/[!@#$%^&*()+=\[\]\{\}\:\;\'\",.<>?/\\|`~]/g,'');
+//         terms=terms.replace(/ /g,'+');
+//         searchTerm+=terms;
+//         console.log(searchTerm);
+//           $.ajax({url: searchTerm, method: "GET"}) 
+//             .done(function(RETURN) {
+//             var title=[];
+//             console.log('got here');
+//             for (var j=0;j<10;j++){
+//               title[j] = {
+//                name:RETURN.items[j].title,
+//                url:RETURN.items[j].link
+//               };
+//               console.log(title[j]);
+//             }
+//               // locationRef.set(title);
+//           });
+//           return false;
+// });
 
 // =======
 				var searchTerm="https://www.googleapis.com/customsearch/v1?key=AIzaSyCMGfdDaSfjqv5zYoS0mTJnOT3e9MURWkU&cx=005427488377789592791:mcug_u68wl4&q=wine+";
@@ -220,7 +220,7 @@ $('#addLocation').on('click', function(){
 					$.ajax({url: searchTerm, method: "GET"}) 
 						.done(function(RETURN) {
 						var title=[];
-						console.log('got here');
+						console.log('got here - event search');
 						for (var j=0;j<10;j++){
 							title[j] = {
 							 name:RETURN.items[j].title,
@@ -228,10 +228,11 @@ $('#addLocation').on('click', function(){
 							};
 						}
 							eventRef.set(title);
+							console.log(title);
 					});
-					setTimeout("pageRedirect('events.html')",1000);
-					// return false;
-// };
+					setTimeout("pageRedirect('events.html')",2000);
+					return false;
+});
 
     // var listGift = [];
     // giftList = Math.floor(Math.random() * names.length); 
