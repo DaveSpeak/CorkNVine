@@ -58,7 +58,7 @@ $(document).ready(function() {
 
 function chooseWine() {
 
-  
+
 
   $.ajax({
             url: 'http://api.snooth.com/wines/?akey=wy1wfb4xvzcqbqhvvxf5yay3z8yt9vynuftd6n80bi9y9f56&q=wine&n=1&sr',
@@ -77,7 +77,7 @@ function chooseWine() {
         //   })
         
           // .done(function(response) {
-             var info = response.wines;
+             var info = JSON.parse(response.wines);
 
 
             console.log("info = " + info);
