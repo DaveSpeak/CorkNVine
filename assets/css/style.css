@@ -250,7 +250,7 @@ ul.sidebar>li {
 }
 
 #dayWine>img,
-#gifting>img {
+#gifting>a>img {
   border-radius: 6px;
 }
 
