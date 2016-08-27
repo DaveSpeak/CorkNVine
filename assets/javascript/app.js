@@ -118,13 +118,14 @@ function populateMenu(menuId,itemId,classId){
 				// console.log(searchTerm);
 					$.ajax({url: searchTerm, method: "GET"}) 
 						.done(function(RETURN) {
+							console.log(RETURN);	
 						var title=[];
 						for (var j=0;j<10;j++){
 							title[j] = {
 							 name:RETURN.items[j].title,
 							 url:RETURN.items[j].link
 							};
-							console.log(title[j]);
+							// console.log(title[j]);
 						}
 							choiceRef.set(title);
 					});
@@ -144,7 +145,8 @@ $('#strange').on('click', function(){
 	alert(strangeFacts[select]);
 	return false;
 });
-$('#location').on('click', function(){
+$('#addLocation').on('click', function(){
+	console.log('got here');
 				var searchTerm="https://www.googleapis.com/customsearch/v1?key=AIzaSyCMGfdDaSfjqv5zYoS0mTJnOT3e9MURWkU&cx=005427488377789592791:mcug_u68wl4&q=wine+";
 				var terms=$('#location-input').val().trim();
 				terms=terms.replace(/[!@#$%^&*()+=\[\]\{\}\:\;\'\",.<>?/\\|`~]/g,'');
@@ -162,9 +164,9 @@ $('#location').on('click', function(){
 							};
 							console.log(title[j]);
 						}
-							locationRef.set(title);
+							// locationRef.set(title);
 					});
-		setTimeout("pageRedirect('events.html')",2000);
+		// setTimeout("pageRedirect('events.html')",2000);
 					return false;
 });
 // firebase.initializeApp(config);
