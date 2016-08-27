@@ -1,27 +1,30 @@
 
+// var wineX;
+// var imageX;
+// var nameX;
 
-    if (document.readyState != 'loading'){
-    start();
-} else {
-    document.addEventListener('DOMContentLoaded', wining);
-}
+//     if (document.readyState != 'loading'){
+//     start();
+// } else {
+//     document.addEventListener('DOMContentLoaded', wining);
+// }
 
-function wining() {
-drop = new Drop({
-        target: document.querySelector('#dayWine'),
-        content: "wine!",
-        position: 'center center',
-        openOn: 'hover',
-        classes: 'drop-theme-arrows-bounce-dark'
-    });
+// function wining() {
 // drop = new Drop({
-//         target: document.querySelector('#gifting'),
-//         content: listGift[0],
+//         target: document.querySelector('#dayWine'),
+//         content: dayW,
 //         position: 'center center',
 //         openOn: 'hover',
 //         classes: 'drop-theme-arrows-bounce-dark'
 //     });
-};
+// // drop = new Drop({
+// //         target: document.querySelector('#gifting'),
+// //         content: listGift[0],
+// //         position: 'center center',
+// //         openOn: 'hover',
+// //         classes: 'drop-theme-arrows-bounce-dark'
+// //     });
+// };
 
 // function go() {
 //    $('#randomQ').on('mouseover', function(){
@@ -53,10 +56,14 @@ drop = new Drop({
 
 $(document).ready(function() {
 
-  var info;
-  var wineImage;
+  var dayW;
+  var imageWine;
+  var nameWine;
+  var imageX;
+  var nameX;
+  var wineX;
 
-function chooseWine() {
+// function chooseWine() {
 
 
 
@@ -66,6 +73,21 @@ function chooseWine() {
         }).done(function(response) {
            console.log(JSON.parse(response));
         // });
+        wineX = JSON.parse(response);
+        imageX = $('<img>').attr('scr', wineX.wines[0].image);
+        nameX = $('<h1>').html(wineX.wines[0].name);
+            // console.log("name = " + wineX.wines[0].name);
+            // console.log("image = " + wineX.wines[0].image);
+
+             // var imageWine = $(('<img>').imageX);
+            console.log("imageX = " + imageX);
+            // var nameWine = $('<h1>').html(nameX);
+                        console.log("nameX = " + nameX);
+
+            dayW = $('<div>').append(imageX).append(nameX);
+            });
+         // name:response.items[j].title,
+         //       url:response.items[j].link
 
         // var queryURL = "http://api.snooth.com/wines/?akey=wy1wfb4xvzcqbqhvvxf5yay3z8yt9vynuftd6n80bi9y9f56&q=wine&n=1&sr";
 
@@ -77,20 +99,19 @@ function chooseWine() {
         //   })
         
           // .done(function(response) {
-             var info = JSON.parse(response.wines);
+             // var info = JSON.parse(response.wines);
 
 
-            console.log("info = " + info);
-            //  results = response.wines;
-             var nameW = info.name;
-            var imageW = info.image;
+            // console.log("info = " + info);
+            // //  results = response.wines;
+            //  var nameW = info.name;
+            // var imageW = info.image;
 
-console.log(JSON.parse(response));
-             console.log("name = " + nameW);
-            console.log("image = " + imageW);
-            var imageWine = $('<img>').attr('src', imageW);
-            var nameWine = $('<h1>').html(nameW);
-            var dayW = $('<div>').append(imageWine).append(nameWine);
+            //  console.log("name = " + nameW);
+            // console.log("image = " + imageW);
+            // var imageWine = $('<img>').attr('src', imageW);
+            // var nameWine = $('<h1>').html(nameW);
+            // var dayW = $('<div>').append(imageWine).append(nameWine);
             
             // //  [what does the api call the info array at beginning NOT data so not response, data but response, wine]
             // // results = response.wine;
@@ -103,7 +124,7 @@ console.log(JSON.parse(response));
 
 // console.log(          
  
-            });
+            
 
 //          console.log(JSON.parse(response));
 
@@ -131,8 +152,9 @@ console.log(JSON.parse(response));
 //     });
 
 // };
-};
-chooseWine();
+// };
+// chooseWine();
+
 
 // $(document).ready(function() {
     
@@ -213,4 +235,27 @@ chooseWine();
 //         classes: 'drop-theme-arrows-bounce-dark'
 //     });
 
+
+//     if (document.readyState != 'loading'){
+//     start();
+// } else {
+//     document.addEventListener('DOMContentLoaded', wining);
+// }
+
+// function wining() {
+// drop = new Drop({
+//         target: document.querySelector('#dayWine'),
+//         content: dayW,
+//         position: 'center center',
+//         openOn: 'hover',
+//         classes: 'drop-theme-arrows-bounce-dark'
+//     });
+// // drop = new Drop({
+// //         target: document.querySelector('#gifting'),
+// //         content: listGift[0],
+// //         position: 'center center',
+// //         openOn: 'hover',
+// //         classes: 'drop-theme-arrows-bounce-dark'
+// //     });
+// };
 
