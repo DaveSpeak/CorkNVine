@@ -66,6 +66,8 @@ $(document).ready(function() {
 // function chooseWine() {
 
 
+// // <<<<<<< HEAD
+// //         var queryURL = "http://api.snooth.com/wines/?akey=wy1wfb4xvzcqbqhvvxf5yay3z8yt9vynuftd6n80bi9y9f56&q=wine&n=1&sr";
 
   $.ajax({
             url: 'http://api.snooth.com/wines/?akey=wy1wfb4xvzcqbqhvvxf5yay3z8yt9vynuftd6n80bi9y9f56&q=wine&n=1&sr',
@@ -94,9 +96,34 @@ $(document).ready(function() {
         // $.ajax({
         //     url: queryURL,
         //     dataType: "json",
+// //         $.ajax({
+// //             url: queryURL,
+// //             dataType: "json",
+// //             // data: { 
+// //             //   name: value,
+// //             //   image: value},
+// //             method: 'GET'
+// //           })
+        
+// //           .done(function(response) {
+// //              var info = response.wines;
+// // =======
+
+//   $.ajax({
+//             url: 'http://api.snooth.com/wines/?akey=wy1wfb4xvzcqbqhvvxf5yay3z8yt9vynuftd6n80bi9y9f56&q=wine&n=1&sr',
+//             method: 'GET',
+//         }).done(function(response) {
+//            console.log(JSON.parse(response));
+//         // });
+
+//         // var queryURL = "http://api.snooth.com/wines/?akey=wy1wfb4xvzcqbqhvvxf5yay3z8yt9vynuftd6n80bi9y9f56&q=wine&n=1&sr";
+
+//         // $.ajax({
+//         //     url: queryURL,
+//         //     dataType: "json",
            
-        //     type: 'GET'
-        //   })
+//         //     type: 'GET'
+//         //   })
         
           // .done(function(response) {
              // var info = JSON.parse(response.wines);
@@ -112,21 +139,44 @@ $(document).ready(function() {
             // var imageWine = $('<img>').attr('src', imageW);
             // var nameWine = $('<h1>').html(nameW);
             // var dayW = $('<div>').append(imageWine).append(nameWine);
+//           // .done(function(response) {
+//              var info = JSON.parse(response.wines);
+
+// // >>>>>>> 5da89e32b8bb189c63cf07b6ed5b7ae64bcb3599
+
+//             console.log("info = " + info);
+//             //  results = response.wines;
+//              var nameW = info.name;
+//             var imageW = info.image;
+
+// // <<<<<<< HEAD
+// // =======
+// // console.log(JSON.parse(response));
+// // >>>>>>> 5da89e32b8bb189c63cf07b6ed5b7ae64bcb3599
+//              console.log("name = " + nameW);
+//             console.log("image = " + imageW);
+//             var imageWine = $('<img>').attr('src', imageW);
+//             var nameWine = $('<h1>').html(nameW);
+//             var dayW = $('<div>').append(imageWine).append(nameWine);
             
-            // //  [what does the api call the info array at beginning NOT data so not response, data but response, wine]
-            // // results = response.wine;
+//             // //  [what does the api call the info array at beginning NOT data so not response, data but response, wine]
+//             // // results = response.wine;
 
-            //       // var wineDiv = $('<div class="wine">');
-            //       var name = response.name;
-            //       var image = response.image;
-            //      console.log("name = " + name);
-            //      console.log("image = " + image);
+//             //       // var wineDiv = $('<div class="wine">');
+//             //       var name = response.name;
+//             //       var image = response.image;
+//             //      console.log("name = " + name);
+//             //      console.log("image = " + image);
 
-// console.log(          
+// // console.log(          
  
-            
+            // });
 
-//          console.log(JSON.parse(response));
+// <<<<<<< HEAD
+// //          
+// =======
+// //          console.log(JSON.parse(response));
+// >>>>>>> 5da89e32b8bb189c63cf07b6ed5b7ae64bcb3599
 
 //     if (document.readyState != 'loading'){
 //     start();

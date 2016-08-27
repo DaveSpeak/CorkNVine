@@ -23,25 +23,25 @@
 //     });
 // };
 
-    if (document.readyState != 'loading'){
-    start();
-} else {
-    document.addEventListener('DOMContentLoaded', wining);
-}
+//     if (document.readyState != 'loading'){
+//     start();
+// } else {
+//     document.addEventListener('DOMContentLoaded', wining);
+// }
 
-function wining() {
+// function wining() {
 
-drop = new Drop({
-        target: document.querySelector('#dayWine'),
-        content: dayW,
-        position: 'center center',
-        openOn: 'hover',
-        classes: 'drop-theme-arrows-bounce-dark'
-    });
-};
+// drop = new Drop({
+//         target: document.querySelector('#dayWine'),
+//         content: listWine[0],
+//         position: 'center center',
+//         openOn: 'hover',
+//         classes: 'drop-theme-arrows-bounce-dark'
+//     });
+// };
 
 
-$(document).ready(function() {
+// $(document).ready(function() {
 
 var strangeFacts=[
 	'Wine bottles were once used as projectiles during the French Revolution',
@@ -70,7 +70,7 @@ var matchDrink=[
 	{title:'Beer',like:'beer',match:'merlot'},
 	{title:'Hard Lemonade or Hard Iced Tea',like:'hard-lemonade',match:'zinfandel'},
 	{title:'Other',like:'other',match:'search'}
-	]
+	];
 var matchFood=[
 	{title:'Red Meat',like:'red-meat',match:'cabernet-sauvignon'},
 	{title:'Poultry',like:'poultry',match:'sauvignon-blanc'},
@@ -81,14 +81,19 @@ var matchFood=[
 	{title:'Spicy',like:'spicy',match:'petit-sirah'},
 	{title:'Sweet with chocolate',like:'sweet-chocolate',match:'zinfandel'},
 	{title:'Other sweets',like:'other-sweet',match:'search'}
-]
-  // Initialize Firebase
-//   var config = {
-//     apiKey: "AIzaSyBlMaraNlThfpxmkyToi52NGL2HXuTZjOE",
-//     authDomain: "corknvine-6d5a8.firebaseapp.com",
-//     databaseURL: "https://corknvine-6d5a8.firebaseio.com",
-//     storageBucket: "corknvine-6d5a8.appspot.com",
-//   };
+];
+//  Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBlMaraNlThfpxmkyToi52NGL2HXuTZjOE",
+    authDomain: "corknvine-6d5a8.firebaseapp.com",
+    databaseURL: "https://corknvine-6d5a8.firebaseio.com",
+    storageBucket: "corknvine-6d5a8.appspot.com",
+  };
+firebase.initializeApp(config);
+var database = firebase.database();
+var choiceRef = database.ref("/choices");
+var locationRef = database.ref("/locations");
+var eventRef = database.ref("/events");
 
 $(document).ready(function() {
 	// populate drink match list
@@ -113,19 +118,20 @@ function populateMenu(menuId,itemId,classId){
 				// console.log(searchTerm);
 					$.ajax({url: searchTerm, method: "GET"}) 
 						.done(function(RETURN) {
+							console.log(RETURN);	
 						var title=[];
 						for (var j=0;j<10;j++){
 							title[j] = {
 							 name:RETURN.items[j].title,
 							 url:RETURN.items[j].link
 							};
-							console.log(title[j]);
+							// console.log(title[j]);
 						}
 							choiceRef.set(title);
 					});
 			}
 		}
-		setTimeout("pageRedirect('pairings.html')",1000);
+		setTimeout("pageRedirect('pairings.html')",2000);
 		// pageRedirect('dummy.html');
 		});
 }
@@ -140,8 +146,9 @@ $('#strange').on('click', function(){
 	return false;
 });
 $('#addLocation').on('click', function(){
-				var searchTerm="https://www.googleapis.com/customsearch/v1?key=AIzaSyCMGfdDaSfjqv5zYoS0mTJnOT3e9MURWkU&cx=005427488377789592791:mcug_u68wl4&q=vineyard+";
-				var terms=$('#location-input').val().trim();;
+	console.log('got here');
+				var searchTerm="https://www.googleapis.com/customsearch/v1?key=AIzaSyCMGfdDaSfjqv5zYoS0mTJnOT3e9MURWkU&cx=005427488377789592791:mcug_u68wl4&q=wine+";
+				var terms=$('#location-input').val().trim();
 				terms=terms.replace(/[!@#$%^&*()+=\[\]\{\}\:\;\'\",.<>?/\\|`~]/g,'');
 				terms=terms.replace(/ /g,'+');
 				searchTerm+=terms;
@@ -159,7 +166,9 @@ $('#addLocation').on('click', function(){
 						}
 							// locationRef.set(title);
 					});
+		// setTimeout("pageRedirect('events.html')",2000);
 					return false;
+});
 // firebase.initializeApp(config);
 // var database = firebase.database();
 // var choiceRef = database.ref("/choices");
@@ -238,44 +247,43 @@ $('#addLocation').on('click', function(){
 // 							// locationRef.set(title);
 // 					});
 // 					return false;
-});
 
 
-      var quotes = ['“In victory, you deserve Champagne. In defeat you need it.” ― Napoleon Bonaparte',
-       '“Beer is made by men, wine by God.”― Martin Luther', 
-       '“I cook with wine, sometimes I even add it to the food.” ― W.C. Fields', 
-       '“It takes a lot of good beer to make great wine” ― Brian O’Donnell, Winemaker of Belle Pente', 
-       '“Either give me more wine or leave me alone.” - Rumi', 
-       '“What wine goes with Captain Crunch?” - George Carlin', 
-       '“Wine is the most healthful and most hygienic of beverages.” -  Louis Pasteur', 
-       '“Anyone who tries to make you believe that he knows all about wines is obviously a fake.” -  Leon Adams', 
-       '“A man will be eloquent if you give him good wine.” – Ralph Waldo Emerson', 
-       '“One of the disadvanages of wine is that it makes a man mistake words for thoughts.” – Samuel Johnson', 
-       '“When it came to writing about wine, I did what almost everybody does – faked it” – Art Buchwald', 
-       '“Wine makes daily living easier, less hurried, with fewer tensions and more tolerance.” –Benjamin Franklin', 
-       '“My only regret in life is that I did not drink more wine.” – Ernest Hemingway', 
-       '“There can never be any substitute for your own palate nor any better education than tasting the wine yourself.” – Robert Parker'];
+//       var quotes = ['“In victory, you deserve Champagne. In defeat you need it.” ― Napoleon Bonaparte',
+//        '“Beer is made by men, wine by God.”― Martin Luther', 
+//        '“I cook with wine, sometimes I even add it to the food.” ― W.C. Fields', 
+//        '“It takes a lot of good beer to make great wine” ― Brian O’Donnell, Winemaker of Belle Pente', 
+//        '“Either give me more wine or leave me alone.” - Rumi', 
+//        '“What wine goes with Captain Crunch?” - George Carlin', 
+//        '“Wine is the most healthful and most hygienic of beverages.” -  Louis Pasteur', 
+//        '“Anyone who tries to make you believe that he knows all about wines is obviously a fake.” -  Leon Adams', 
+//        '“A man will be eloquent if you give him good wine.” – Ralph Waldo Emerson', 
+//        '“One of the disadvanages of wine is that it makes a man mistake words for thoughts.” – Samuel Johnson', 
+//        '“When it came to writing about wine, I did what almost everybody does – faked it” – Art Buchwald', 
+//        '“Wine makes daily living easier, less hurried, with fewer tensions and more tolerance.” –Benjamin Franklin', 
+//        '“My only regret in life is that I did not drink more wine.” – Ernest Hemingway', 
+//        '“There can never be any substitute for your own palate nor any better education than tasting the wine yourself.” – Robert Parker'];
 
-      choices = Math.floor(Math.random() * quotes.length);
-      quote = quotes[choices];
+//       choices = Math.floor(Math.random() * quotes.length);
+//       quote = quotes[choices];
      
-    	 $('#front-quote').on('mouseover', function() {
+//     	 $('#front-quote').on('mouseover', function() {
 
-    	 	$("#quote-back").html(quote);
-    	 	console.log(quote);
+//     	 	$("#quote-back").html(quote);
+//     	 	console.log(quote);
 
-    	 	 $('#front-quote').on('mouseover', function() {
+//     	 	 $('#front-quote').on('mouseover', function() {
     	
     	 		
-    	 			$("#quote-back").html(quote);
+//     	 			$("#quote-back").html(quote);
     	 	
-    	 	console.log("hover!");
-    	 	console.log(quotes = "after");
-    	 })
+//     	 	console.log("hover!");
+//     	 	console.log(quotes = "after");
+//     	 })
     
-});
+// });
 
 
 
-});
+// });
 
